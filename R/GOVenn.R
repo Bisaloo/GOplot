@@ -356,7 +356,7 @@ GOVenn<-function(data1, data2, data3, title, label, lfc.col, circle.col, plot=T)
 	  geom_polygon(data=DownOv, aes(x,y,group=id),fill=lfc.col[3],color='white')+
 	  geom_polygon(data=Change, aes(x,y,group=id),fill=lfc.col[2],color='white')+
 	  geom_text(data=small.pieT,aes(x=x,y=y,label=label),size=4)+
-    theme_blank+
+    theme_void()+
     labs(title=title)
   
   if (plot) return(g) else return(list(plot=g,table=table))
