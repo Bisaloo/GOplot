@@ -4,7 +4,9 @@
 \name{EC}
 \alias{EC}
 \title{Transcriptomic information of endothelial cells.}
-\format{A list containing 5 items}
+\format{
+A list containing 5 items
+}
 \source{
 \url{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE47067}
 }
@@ -21,4 +23,3 @@ annotation enrichment analysis of the set of differentially expressed genes
 (adjusted p-value < 0.05).
 }
 \keyword{datasets}
-

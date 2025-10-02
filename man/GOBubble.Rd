@@ -4,8 +4,17 @@
 \alias{GOBubble}
 \title{Bubble plot.}
 \usage{
-GOBubble(data, display, title, colour, labels, ID = T, table.legend = T,
-  table.col = T, bg.col = F)
+GOBubble(
+  data,
+  display,
+  title,
+  colour,
+  labels,
+  ID = TRUE,
+  table.legend = TRUE,
+  table.col = TRUE,
+  bg.col = FALSE
+)
 }
 \arguments{
 \item{data}{A data frame with coloumns for category, GO ID, term, adjusted 
@@ -48,21 +57,19 @@ The x- axis of the plot represents the z-score. The negative
   term name.If static is set to FALSE the mouse hover effect will be enabled.
 }
 \examples{
-\dontrun{
 #Load the included dataset
 data(EC)
 
 #Building the circ object
-circ <- circular_dat(EC$david, EC$genelist)
+circ <- circle_dat(EC$david, EC$genelist)
 
 #Creating the bubble plot colouring the table entries according to the category
-GOBubble(circ, table.col = T)
+GOBubble(circ, table.col = TRUE)
 
 #Creating the bubble plot displaying the term instead of the ID and without the table
-GOBubble(circ, ID = F, table.legend = F)
+GOBubble(circ, ID = FALSE, table.legend = FALSE)
 
 #Faceting the plot
 GOBubble(circ, display = 'multiple')
-}
-}
 
+}

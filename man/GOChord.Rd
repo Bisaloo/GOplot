@@ -4,8 +4,22 @@
 \alias{GOChord}
 \title{Displays the relationship between genes and terms.}
 \usage{
-GOChord(data, title, space, gene.order, gene.size, gene.space, nlfc = 1,
-  lfc.col, lfc.min, lfc.max, ribbon.col, border.size, process.label, limit)
+GOChord(
+  data,
+  title,
+  space,
+  gene.order,
+  gene.size,
+  gene.space,
+  nlfc = 1,
+  lfc.col,
+  lfc.min,
+  lfc.max,
+  ribbon.col,
+  border.size,
+  process.label,
+  limit
+)
 }
 \arguments{
 \item{data}{The matrix represents the binary relation (1= is related to, 0= 
@@ -74,9 +88,10 @@ The \code{gene.order} argument has three possible options: "logFC",
   or equal to the threshold are excluded.
 }
 \examples{
-\dontrun{
 # Load the included dataset
 data(EC)
+
+circ<-circle_dat(EC$david, EC$genelist)
 
 # Generating the binary matrix
 chord<-chord_dat(circ,EC$genes,EC$process)
@@ -89,9 +104,8 @@ GOChord(chord, limit = c(0,5))
 
 # Creating the chord plot genes ordered by logFC and a different logFC color scale
 GOChord(chord,space=0.02,gene.order='logFC',lfc.col=c('red','black','cyan'))
-}
+
 }
 \seealso{
 \code{\link{chord_dat}}
 }
-

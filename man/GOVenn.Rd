@@ -45,12 +45,11 @@ The \code{plot} argument can be used to adjust the amount of
   ($table) will be returned containing the elements of the various overlaps.
 }
 \examples{
-\dontrun{
 #Load the included dataset
 data(EC)
 
 #Generating the circ object
-circ<-circular_dat(EC$david, EC$genelist)
+circ<-circle_dat(EC$david, EC$genelist)
 
 #Selecting terms of interest
 l1<-subset(circ,term=='heart development',c(genes,logFC))
@@ -58,6 +57,5 @@ l2<-subset(circ,term=='plasma membrane',c(genes,logFC))
 l3<-subset(circ,term=='tissue morphogenesis',c(genes,logFC))
 
 GOVenn(l1,l2,l3, label=c('heart development','plasma membrane','tissue morphogenesis'))
-}
-}
 
+}

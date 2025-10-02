@@ -4,8 +4,18 @@
 \alias{GOCircle}
 \title{Circular visualization of the results of a functional analysis.}
 \usage{
-GOCircle(data, title, nsub, rad1, rad2, table.legend = T, zsc.col, lfc.col,
-  label.size, label.fontface)
+GOCircle(
+  data,
+  title,
+  nsub,
+  rad1,
+  rad2,
+  table.legend = T,
+  zsc.col,
+  lfc.col,
+  label.size,
+  label.fontface
+)
 }
 \arguments{
 \item{data}{A special data frame which should be the result of 
@@ -53,7 +63,6 @@ The outer circle shows a scatter plot for each term of the logFC of
   displayed. It starts with the first row of the input data frame.
 }
 \examples{
-\dontrun{
 # Load the included dataset
 data(EC)
 
@@ -71,9 +80,8 @@ GOCircle(circ, zsc.col = c('yellow', 'black', 'cyan'))
 
 # Creating the circular plot with different font style
 GOCircle(circ, label.size = 5, label.fontface = 'italic')
-}
+
 }
 \seealso{
 \code{\link{circle_dat}}, \code{\link{GOBar}}
 }
-

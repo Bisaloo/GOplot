@@ -20,7 +20,6 @@ The function eliminates all terms with a gene overlap >= set
 The function is currently very slow.
 }
 \examples{
-\dontrun{
 # Load the included dataset
 data(EC)
 
@@ -34,5 +33,3 @@ reduced_circ <- reduce_overlap(circ)
 GOBubble(reduced_circ)
 
 }
-}
-

@@ -34,12 +34,10 @@ Since most of the gene- annotation enrichment analysis are based on
   from \code{terms}.
 }
 \examples{
-\dontrun{
 #Load the included dataset
 data(EC)
 
 #Building the circ object
-circ<-circular_dat(EC$david, EC$genelist)
-}
-}
+circ<-circle_dat(EC$david, EC$genelist)
 
+}

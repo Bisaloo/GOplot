@@ -4,8 +4,22 @@
 \alias{GOCluster}
 \title{Circular dendrogram.}
 \usage{
-GOCluster(data, process, metric, clust, clust.by, nlfc, lfc.col, lfc.min,
-  lfc.max, lfc.space, lfc.width, term.col, term.space, term.width)
+GOCluster(
+  data,
+  process,
+  metric,
+  clust,
+  clust.by,
+  nlfc,
+  lfc.col,
+  lfc.min,
+  lfc.max,
+  lfc.space,
+  lfc.width,
+  term.col,
+  term.space,
+  term.width
+)
 }
 \arguments{
 \item{data}{A data frame which should be the result of 
@@ -64,7 +78,7 @@ The inner ring can be split into smaller rings to display multiply
 data(EC)
 
 #Generating the circ object
-circ<-circular_dat(EC$david, EC$genelist)
+circ<-circle_dat(EC$david, EC$genelist)
 
 #Creating the cluster plot
 GOCluster(circ, EC$process)
@@ -73,4 +87,3 @@ GOCluster(circ, EC$process)
 GOCluster(circ,EC$process,clust.by='logFC',lfc.col=c('darkgoldenrod1','black','cyan1'))
 }
 }
-

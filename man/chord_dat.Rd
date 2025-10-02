@@ -31,7 +31,6 @@ If more than one logFC value for each gene is at disposal, only one
   added manually later.
 }
 \examples{
-\dontrun{
 # Load the included dataset
 data(EC)
 
@@ -42,8 +41,6 @@ circ <- circle_dat(EC$david, EC$genelist)
 chord <- chord_dat(circ, EC$genes, EC$process)
 
 }
-}
 \seealso{
 \code{\link{GOChord}}
 }
-

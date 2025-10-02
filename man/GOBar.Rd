@@ -33,18 +33,16 @@ If \code{display} is used to facet the plot the width of the panels
   will be proportional to the length of the x scale.
 }
 \examples{
-\dontrun{
 #Load the included dataset
 data(EC)
 
 #Building the circ object
-circ<-circular_dat(EC$david, EC$genelist)
+circ<-circle_dat(EC$david, EC$genelist)
 
 #Creating the bar plot
 GOBar(circ)
 
 #Faceting the plot
 GOBar(circ, display='multiple')
-}
-}
 
+}
