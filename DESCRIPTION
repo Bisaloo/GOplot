@@ -2,7 +2,6 @@ Package: GOplot
 Type: Package
 Title: Visualization of Functional Analysis Data
 Version: 1.0.2
-Date: 2016-03-30
 Authors@R: c(
     person("Wencke", "Walter", , email = "wencke.walter@arcor.de", role = c("aut", "cre")),
     person("Fatima", "Sanchez-Cabo", , role = "aut")
@@ -25,9 +24,3 @@ VignetteBuilder: knitr
 LazyData: TRUE
 RoxygenNote: 5.0.1
 NeedsCompilation: no
-Packaged: 2016-03-30 08:24:21 UTC; BioinfoNerd
-Author: Wencke Walter [aut, cre],
-  Fatima Sanchez-Cabo [aut]
-Maintainer: Wencke Walter <wencke.walter@arcor.de>
-Repository: CRAN
-Date/Publication: 2016-03-30 20:35:02
