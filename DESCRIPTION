@@ -3,8 +3,12 @@ Type: Package
 Title: Visualization of Functional Analysis Data
 Version: 1.0.1
 Date: 2015-07-15
-Author: Wencke Walter, Fatima Sanchez-Cabo
-Maintainer: Wencke Walter <wencke.walter@arcor.de>
+Authors@R:
+  c(
+    person("Wencke", "Walter", email = "wencke.walter@arcor.de",
+           role = c("aut", "cre")),
+    person("Fatima", "Sanchez-Cabo", role = "aut")
+  )
 URL: https://github.com/wencke/wencke.github.io
 BugReports: https://github.com/wencke/wencke.github.io/issues
 Description: Implementation of multilayered visualizations for enhanced graphical 
