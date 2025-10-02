@@ -115,7 +115,7 @@ circle_dat <- function(terms, genes){
   if (length(tgenes[[1]]) == 1) tgenes <- strsplit(as.vector(terms$genes), ',')
   count <- sapply(1:length(tgenes), function(x) length(tgenes[[x]]))
   logFC <- sapply(unlist(tgenes), function(x) genes$logFC[match(x, genes$ID)])
-  if(class(logFC) == 'factor'){
+  if(is.factor(logFC)){
     logFC <- gsub(",", ".", gsub("\\.", "", logFC))
     logFC <- as.numeric(logFC)
   }
@@ -201,7 +201,7 @@ chord_dat <- function(data, genes, process, limit){
     if(is.vector(genes)){
       genes <- as.character(genes) 
     }else{
-      if(class(genes[, 2]) != 'numeric') genes[, 2] <- as.numeric(levels(genes[, 2]))[genes[, 2]]
+      if(!is.numeric(genes[, 2])) genes[, 2] <- as.numeric(levels(genes[, 2]))[genes[, 2]]
       genes[, 1] <- as.character(genes[, 1])
       colnames(genes) <- c('genes', 'logFC')
     }
@@ -209,7 +209,7 @@ chord_dat <- function(data, genes, process, limit){
   if (missing(process)){
     process <- unique(data$term)
   }else{
-    if(class(process) != 'character') process <- as.character(process)
+    if(!is.character(process)) process <- as.character(process)
   }
   if (strsplit(process[1],':')[[1]][1] == 'GO'){
     subData <- subset(data, id%in%process)
