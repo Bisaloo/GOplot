@@ -17,21 +17,20 @@
 #'   of the gene.
 #' @import ggplot2
 #' @examples
-#' \dontrun{
 #' # Load the included dataset
 #' data(EC)
-#' 
+#'
 #' # Generate the circ object
 #' circ <- circle_dat(EC$david, EC$genelist)
-#' 
+#'
 #' # Generate the chord object
 #' chord <- chord_dat(circ, EC$genes, EC$process)
-#' 
+#'
 #' # Create the plot with user-defined colors
 #' GOHeat(chord, nlfc = 1, fill.col = c('red', 'yellow', 'green'))
-#' }
-#' @export
 #' 
+#' @export
+#'
 
 GOHeat <- function(data, nlfc, fill.col){
   x <- y <- z <- NULL
