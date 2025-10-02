@@ -123,8 +123,8 @@ GOCluster<-function(data, process, metric, clust, clust.by, nlfc, lfc.col, lfc.m
     coord_polar()+
     scale_y_reverse()+
     theme(legend.position='bottom',legend.background = element_rect(fill='transparent'),legend.box='horizontal',legend.direction='horizontal')+
-    theme_blank  
-    
+    theme_void()
+
 }
 
 #' 
@@ -318,8 +318,8 @@ GOChord <- function(data, title, space, gene.order, gene.size, gene.space, nlfc 
     geom_text(aes(xgen, ygen, label = labels, angle = angle), data = df_texg, size = gene.size) +
     geom_polygon(aes(x = lx, y = ly, group = ID), data = df_path, fill = colRibb, color = 'black', size = border.size, inherit.aes = F) +		
     labs(title = title) +
-    theme_blank
-  
+    theme_void()
+
   if (nlfc >= 1){
     g + geom_polygon(data = df_genes, aes(x, y, group = id, fill = logFC), inherit.aes = F, color = 'black') +
       scale_fill_gradient2('logFC', space = 'Lab', low = lfc.col[3], mid = lfc.col[2], high = lfc.col[1], guide = guide_colorbar(title.position = "top", title.hjust = 0.5), 

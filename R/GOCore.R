@@ -525,7 +525,7 @@ GOCircle <- function(data, title, nsub, rad1, rad2, table.legend = T, zsc.col, l
     labs(title = title) +
     ylim(1, rad2 + 1.6) +
     xlim(0, 10) +
-    theme_blank +
+    theme_void() +
     scale_fill_gradient2('z-score', space = 'Lab', low = zsc.col[3], mid = zsc.col[2], high = zsc.col[1], guide = guide_colourbar(title.position = "top", title.hjust = 0.5), breaks = c(min(df$zscore), max(df$zscore)),labels = c('decreasing', 'increasing')) +
     theme(legend.position = 'bottom', legend.background = element_rect(fill = 'transparent'), legend.box = 'horizontal', legend.direction = 'horizontal') +	
     geom_point(data = dfp, aes(x = logx, y = logy2 + logy), pch = 21, fill = 'transparent', colour = 'black', size = 3)+
