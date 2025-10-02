@@ -38,21 +38,20 @@
 #' @import RColorBrewer
 #' @import stats
 #' @examples
-#' \dontrun{
 #' #Load the included dataset
 #' data(EC)
-#' 
+#'
 #' #Generating the circ object
-#' circ<-circular_dat(EC$david, EC$genelist)
-#' 
+#' circ<-circle_dat(EC$david, EC$genelist)
+#'
 #' #Creating the cluster plot
 #' GOCluster(circ, EC$process)
-#' 
+#'
 #' #Cluster the data according to gene expression and assigning a different color scale for the logFC
 #' GOCluster(circ,EC$process,clust.by='logFC',lfc.col=c('darkgoldenrod1','black','cyan1'))
-#' }
+#'
 #' @export
-#' 
+#'
 
 GOCluster<-function(data, process, metric, clust, clust.by, nlfc, lfc.col, lfc.min, lfc.max, lfc.space, lfc.width, term.col, term.space, term.width){
   x <- y <- xend <- yend <- width <- space <- logFC <- NULL
@@ -172,19 +171,21 @@ GOCluster<-function(data, process, metric, clust, clust.by, nlfc, lfc.col, lfc.m
 #' @import ggplot2
 #' @import grDevices
 #' @examples
-#' \dontrun{
 #' #Load the included dataset
 #' data(EC)
-#' 
+#'
+#' #Generating the circ object
+#' circ<-circle_dat(EC$david, EC$genelist)
+#'
 #' #Generating the binary matrix
 #' chord<-chord_dat(circ,EC$genes,EC$process)
-#' 
+#'
 #' #Creating the chord plot
 #' GOChord(chord)
-#' 
+#'
 #' #Creating the chord plot genes ordered by logFC and a different logFC color scale
 #' GOChord(chord,space=0.02,gene.order='logFC',lfc.col=c('red','black','cyan'))
-#' }
+#'
 #' @export
 
 GOChord <- function(data, title, space, gene.order, gene.size, gene.space, nlfc = 1, lfc.col, lfc.min, lfc.max, ribbon.col, border.size, process.label){

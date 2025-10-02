@@ -98,13 +98,12 @@ bezier <- function(data, process.col){
 #'   identifier. Nevertheless, the identifier has to be the same as in "genes" 
 #'   from \code{terms}.
 #' @examples
-#' \dontrun{
 #' #Load the included dataset
 #' data(EC)
-#' 
+#'
 #' #Building the circ object
-#' circ<-circular_dat(EC$david, EC$genelist)
-#' }
+#' circ<-circle_dat(EC$david, EC$genelist)
+#'
 #' @export
 
 circle_dat <- function(terms, genes){
@@ -171,23 +170,21 @@ circle_dat <- function(terms, genes){
 #' @return A binary matrix
 #' @seealso \code{\link{GOChord}}
 #' @examples
-#' \dontrun{
 #' # Load the included dataset
 #' data(EC)
-#' 
+#'
 #' # Building the circ object
-#' circ <- circular_dat(EC$david, EC$genelist)
-#' 
+#' circ <- circle_dat(EC$david, EC$genelist)
+#'
 #' # Building the binary matrix
 #' chord <- chord_dat(circ, EC$genes, EC$process)
-#' 
+#'
 #' # Excluding genes which are assigned only to a single term
 #' chord <- chord_dat(circ, EC$genes, EC$process, limit = c(1,0))
-#' 
+#'
 #' # Excluding terms with a count smaller than 5
 #' chord <- chord_dat(circ, EC$genes, EC$process, limit = c(0,5))
-#' 
-#' }
+#'
 #' @export
 
 chord_dat <- function(data, genes, process, limit){
@@ -278,22 +275,21 @@ chord_dat <- function(data, genes, process, limit){
 #' @import gridExtra
 #' @import graphics
 #' @examples
-#' \dontrun{
 #' #Load the included dataset
 #' data(EC)
-#' 
+#'
 #' #Building the circ object
-#' circ<-circular_dat(EC$david, EC$genelist)
-#' 
+#' circ<-circle_dat(EC$david, EC$genelist)
+#'
 #' #Creating the bubble plot coloring the table entries according to the category
-#' GOBubble(circ, table.col=T)
-#' 
+#' GOBubble(circ, table.col=TRUE)
+#'
 #' #Creating the bubble plot displaying the term instead of the ID and without the table
-#' GOBubble(circ,ID=F,table.legend=F)
-#' 
+#' GOBubble(circ,ID=FALSE,table.legend=FALSE)
+#'
 #' #Faceting the plot
 #' GOBubble(circ, display='multiple')
-#' }
+#'
 #' @export
 GOBubble <- function(data, display, title, color, labels, ID = T, table.legend = T, table.col = T){
   zscore <- adj_pval <- category <- count <- id <- term <- NULL
@@ -367,19 +363,18 @@ GOBubble <- function(data, display, title, color, labels, ID = T, table.legend =
 #' @import gridExtra
 #' @import stats
 #' @examples
-#' \dontrun{
 #' #Load the included dataset
 #' data(EC)
-#' 
+#'
 #' #Building the circ object
-#' circ<-circular_dat(EC$david, EC$genelist)
-#' 
+#' circ<-circle_dat(EC$david, EC$genelist)
+#'
 #' #Creating the bar plot
 #' GOBar(circ)
-#' 
+#'
 #' #Faceting the plot
 #' GOBar(circ, display='multiple')
-#' }
+#'
 #' @export
 
 GOBar <- function(data, display, order.by.zscore = T, title, zsc.col){
@@ -461,22 +456,21 @@ GOBar <- function(data, display, order.by.zscore = T, title, zsc.col){
 #' @import graphics
 #' @seealso \code{\link{circle_dat}}, \code{\link{GOBar}}
 #' @examples
-#' \dontrun{
 #' #Load the included dataset
 #' data(EC)
-#' 
+#'
 #' #Building the circ object
-#' circ<-circular_dat(EC$david, EC$genelist)
-#' 
+#' circ<-circle_dat(EC$david, EC$genelist)
+#'
 #' #Creating the circular plot
 #' GOCircle(circ)
-#' 
+#'
 #' #Creating the circular plot with a different color scale
 #' GOCircle(circ,zsc.col=c('yellow','black','cyan'))
-#' 
+#'
 #' #Creating the circular plot with different font style
 #' GOCircle(circ,label.size=5,label.fontface='italic')
-#' }
+#'
 #' @export
 
 GOCircle <- function(data, title, nsub, rad1, rad2, table.legend = T, zsc.col, lfc.col, label.size, label.fontface){
