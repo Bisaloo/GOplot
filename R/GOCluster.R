@@ -183,6 +183,8 @@ GOCluster<-function(data, process, metric, clust, clust.by, nlfc, lfc.col, lfc.m
 #' # Load the included dataset
 #' data(EC)
 #'
+#' circ<-circle_dat(EC$david, EC$genelist)
+#'
 #' # Generating the binary matrix
 #' chord<-chord_dat(circ,EC$genes,EC$process)
 #'
