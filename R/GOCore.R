@@ -255,16 +255,16 @@ reduce_overlap <- function(data, overlap){
 #' circ <- circle_dat(EC$david, EC$genelist)
 #'
 #' #Creating the bubble plot colouring the table entries according to the category
-#' GOBubble(circ, table.col = T)
+#' GOBubble(circ, table.col = TRUE)
 #'
 #' #Creating the bubble plot displaying the term instead of the ID and without the table
-#' GOBubble(circ, ID = F, table.legend = F)
+#' GOBubble(circ, ID = FALSE, table.legend = FALSE)
 #'
 #' #Faceting the plot
 #' GOBubble(circ, display = 'multiple')
 #'
 #' @export
-GOBubble <- function(data, display, title, colour, labels, ID = T, table.legend = T, table.col = T, bg.col = F){
+GOBubble <- function(data, display, title, colour, labels, ID = TRUE, table.legend = TRUE, table.col = TRUE, bg.col = FALSE){
   zscore <- adj_pval <- category <- count <- id <- term <- NULL
   if (missing(display)) display <- 'single'
   if (missing(title)) title <- ''
