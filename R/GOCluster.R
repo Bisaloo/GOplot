@@ -38,6 +38,7 @@
 #' @import RColorBrewer
 #' @import stats
 #' @examples
+#' \dontrun{
 #' #Load the included dataset
 #' data(EC)
 #'
@@ -49,7 +50,7 @@
 #'
 #' #Cluster the data according to gene expression and assigning a different color scale for the logFC
 #' GOCluster(circ,EC$process,clust.by='logFC',lfc.col=c('darkgoldenrod1','black','cyan1'))
-#'
+#' }
 #' @export
 #'
 
